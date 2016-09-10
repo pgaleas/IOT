@@ -100,8 +100,9 @@ float obtener_temp()
  
  // Convertir a grados Celsius con 10mV por grado,
  // con un desplazamiento inicial de 500 mV
- float temperatureC = (voltage - 0.5) * 100 ;
-
+ // float temperatureC = (voltage - 0.5) * 100 ;
+ // Quitamos el desplazamiento de 0.5 para el sensor LM35
+ float temperatureC = (voltage) * 100 ;
  // Retornar la temperatura en grados Celsius
  return temperatureC;
 }
